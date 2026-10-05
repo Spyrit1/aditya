@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aditya, website designer</title>
+<meta name="description" content="Aditya is a website designer. Simple, clear websites that are easy to use and easy to remember.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#ff5b2e;--blue:#e6edff;--peach:#ffe9de;--mint:#dff4e8;--ink:#161616;--text:#555;--muted:#777;--soft:#f1f1f1;--soft2:#e9e9e9;--line:#e6e6e6}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:Poppins,system-ui,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.w{max-width:1440px;margin:0 auto;padding:0 clamp(24px,8.4vw,120px)}
+
+nav{display:flex;justify-content:space-between;align-items:center;height:100px}
+nav b{font-weight:600;font-size:20px}
+nav div{display:flex;gap:44px;font-size:16px;color:var(--text)}
+nav div a:hover{color:var(--ink)}
+
+.hero{padding:clamp(70px,10.5vw,150px) 0 clamp(90px,12vw,170px)}
+h1{font-weight:500;font-size:clamp(48px,7.8vw,112px);line-height:1.04;letter-spacing:-.035em;max-width:1000px}
+.hero p{margin-top:44px;font-size:clamp(18px,1.5vw,22px);line-height:1.6;color:#666;max-width:560px;font-weight:300}
+.btns{margin-top:52px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:17px 34px;border-radius:50px;font-size:16px;font-weight:500;border:1.5px solid var(--ink);background:#fff;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{background:#fff;color:var(--ink)}
+
+.sec{padding-bottom:clamp(90px,10.5vw,150px)}
+h2{font-weight:500;font-size:clamp(32px,3.1vw,44px);letter-spacing:-.034em;margin-bottom:56px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 32px}
+.card{display:block}
+.card .img{height:clamp(240px,25vw,360px);background:var(--soft);border-radius:14px;position:relative;overflow:hidden}
+.card .bar{position:absolute;left:11%;right:11%;top:36px;bottom:0;background:#fff;border-radius:8px 8px 0 0;padding:20px 24px;transition:transform .3s}
+.card:hover .bar{transform:translateY(-8px)}
+.card .bar i{display:block;border-radius:4px;background:var(--line);margin-bottom:12px}
+.card h3{margin-top:20px;font-size:20px;font-weight:500}
+.card span{font-size:15px;color:var(--muted);font-weight:300}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-bottom:clamp(90px,10.5vw,150px)}
+.about h2{margin:0}
+.about p{font-size:clamp(18px,1.5vw,22px);line-height:1.7;color:var(--text);font-weight:300}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-top:1.5px solid var(--ink);padding-top:28px}
+.services h4{font-size:22px;font-weight:500;margin-bottom:10px}
+.services p{font-size:16px;line-height:1.6;color:#666;font-weight:300}
+
+.cta{margin-top:clamp(90px,10.5vw,150px);background:var(--soft);border-radius:20px;padding:clamp(48px,7.6vw,110px) clamp(28px,5.6vw,80px)}
+.cta h2{font-size:clamp(40px,5.3vw,76px);line-height:1.08;letter-spacing:-.033em;margin-bottom:28px;max-width:800px}
+.cta p{font-size:20px;color:#666;font-weight:300;margin-bottom:44px}
+.ct{display:flex;gap:16px;flex-wrap:wrap}
+
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:56px 0 64px;font-size:15px;color:var(--muted)}
+footer a:hover{color:var(--ink)}
+
+
+.hero{position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1.5px solid var(--line);border-radius:50px;font-size:14px;color:var(--text);margin-bottom:32px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;position:relative}
+.dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#22c55e;animation:pulse 2s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.6}to{transform:scale(3);opacity:0}}
+.up{opacity:0;transform:translateY(28px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d,0s)}
+@keyframes up{to{opacity:1;transform:none}}
+.hv{position:absolute;right:0;bottom:clamp(90px,12vw,170px);width:clamp(300px,28vw,400px);animation:fade .9s .6s both,float 7s 1.5s ease-in-out infinite}
+@keyframes fade{from{opacity:0}}
+@keyframes float{50%{transform:translateY(-14px)}}
+.win{background:var(--soft);border-radius:16px;padding:14px;box-shadow:0 30px 60px rgba(0,0,0,.07)}
+.win .top{display:flex;gap:6px;margin-bottom:12px}
+.win .top i{width:9px;height:9px;border-radius:50%;background:#d4d4d4}
+.win .pg{background:#fff;border-radius:10px;padding:18px;position:relative;overflow:hidden}
+.win .circ{width:92px;height:92px;border-radius:50%;background:var(--ink);margin-bottom:18px;animation:spinin 1.4s .5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes spinin{from{transform:scale(.2) rotate(-90deg);opacity:0}}
+.ln{height:10px;border-radius:5px;background:var(--line);margin-bottom:10px}
+.mini{display:inline-block;margin-top:8px;height:26px;width:84px;border-radius:13px;background:var(--ink)}
+.cur{position:absolute;width:22px;left:12%;top:70%;animation:cur 6s ease-in-out infinite}
+@keyframes cur{0%,100%{transform:translate(0,0)}45%,60%{transform:translate(120px,-34px)}}
+.chip{position:absolute;left:-46px;bottom:-26px;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px 18px;font-size:14px;font-weight:500;display:flex;gap:10px;align-items:center;box-shadow:0 14px 30px rgba(0,0,0,.06);animation:float 5s 1s ease-in-out infinite}
+.chip b{width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;font-size:11px;display:grid;place-items:center}
+.mq{overflow:hidden;border-top:1.5px solid var(--line);border-bottom:1.5px solid var(--line);margin:0 calc(-1*clamp(24px,8.4vw,120px)) clamp(90px,10.5vw,150px);padding:26px 0}
+.mq div{display:flex;width:max-content;animation:mq 28s linear infinite}
+.mq span{font-size:clamp(24px,3vw,40px);font-weight:500;letter-spacing:-.03em;color:var(--ink);padding:0 28px;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.mq span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--soft2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.img{isolation:isolate}
+.tag{position:absolute;right:16px;top:16px;background:var(--ink);color:#fff;font-size:13px;padding:7px 16px;border-radius:50px;opacity:0;transform:translateY(-6px);transition:.3s;z-index:2}
+.card:hover .tag{opacity:1;transform:none}
+.card .img{transition:background .3s}
+.card:hover .img{background:var(--soft2)}
+.card .bar b{display:block;border-radius:50%;background:var(--ink);width:56px;height:56px;margin-bottom:16px}
+.card .bar .row{display:flex;gap:12px}.card .bar .row i{flex:1;height:64px}
+.proc{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:clamp(60px,6vw,90px) 0 0}
+.proc div{border-top:1.5px solid var(--line);padding-top:24px;transition:border-color .3s}
+.proc div:hover{border-color:var(--ink)}
+.proc em{font-style:normal;font-size:15px;color:var(--muted)}
+.proc h4{font-size:26px;font-weight:500;margin:12px 0 8px;letter-spacing:-.02em}
+.proc p{font-size:16px;line-height:1.6;color:#666;font-weight:300}
+.btn{position:relative}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media(max-width:1000px){.hv{display:none}}
+@media(max-width:760px){.proc{grid-template-columns:1fr;gap:28px}}
+@media(prefers-reduced-motion:reduce){.up,.js .rv{opacity:1;transform:none;animation:none}.hv,.chip,.cur,.mq div,.dot::after{animation:none}}
+@media(max-width:760px){
+  nav div{gap:24px;font-size:15px}
+  .grid,.about,.services{grid-template-columns:1fr}
+  .grid{gap:40px}
+  .services{gap:28px}
+  .card .bar{padding:16px}
+}
+
+::selection{background:var(--accent);color:#fff}
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;z-index:50}
+nav div a{position:relative}
+nav div a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;transition:transform .3s}
+nav div a:hover::after{transform:scaleX(1)}
+.hl{background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 94%/0 .08em;animation:ul 1s 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes ul{to{background-size:100% .08em}}
+.blobs{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.blobs i{position:absolute;border-radius:50%}
+.blobs i:nth-child(1){width:240px;height:240px;background:var(--peach);right:3%;top:0;animation:drift 12s ease-in-out infinite}
+.blobs i:nth-child(2){width:120px;height:120px;background:var(--blue);right:22%;top:6%;animation:drift 9s -3s ease-in-out infinite reverse}
+.blobs i:nth-child(3){width:70px;height:70px;background:var(--mint);right:32%;top:34%;animation:drift 7s -2s ease-in-out infinite}
+@keyframes drift{50%{transform:translate(-26px,22px) scale(1.06)}}
+.win{background:var(--blue)}
+.win .circ{background:var(--accent)}
+.mini{background:var(--accent)}
+.chip b{background:var(--accent)}
+.btn{transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.dark:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.mq div:hover{animation-play-state:paused}
+.mq span:nth-child(3n+1)::after{background:var(--accent)}
+.mq span:nth-child(3n+2)::after{background:#6f8bff}
+.mq span:nth-child(3n)::after{background:#3ccf91}
+.card:nth-child(1) .img{background:var(--blue)}
+.card:nth-child(2) .img{background:var(--peach)}
+.card:hover .img{background:inherit}
+.card:nth-child(1):hover .img{background:var(--blue)}
+.card:nth-child(2):hover .img{background:var(--peach)}
+.card .img{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.card:hover .img{transform:translateY(-8px);box-shadow:0 26px 50px rgba(0,0,0,.08)}
+.card .bar b{background:var(--accent)}
+.card h3{transition:color .3s}
+.card:hover h3{color:var(--accent)}
+.tag{background:var(--accent)}
+.services>div{position:relative}
+.services h4{display:flex;align-items:center;gap:12px}
+.services h4::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);transition:transform .3s}
+.services>div:nth-child(2) h4::before{background:#6f8bff}
+.services>div:nth-child(3) h4::before{background:#3ccf91}
+.services>div:hover h4::before{transform:scale(1.8)}
+.proc em{color:var(--accent);font-weight:500}
+.proc div:hover{border-color:var(--accent)}
+.cta{background:var(--peach);position:relative;overflow:hidden}
+.cta>*{position:relative;z-index:1}
+.cta::before,.cta::after{content:"";position:absolute;border-radius:50%;z-index:0}
+.cta::before{width:340px;height:340px;right:-70px;bottom:-110px;background:var(--accent);animation:breathe 7s ease-in-out infinite}
+.cta::after{width:150px;height:150px;right:230px;top:50px;background:var(--blue);animation:drift 9s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.08)}}
+.cta .btn:not(.dark){background:#fff}
+footer a{transition:color .25s}
+footer a:hover{color:var(--accent)}
+@media(max-width:760px){.cta::before{width:200px;height:200px;right:-60px;bottom:-70px}.cta::after{display:none}.blobs i:nth-child(1){width:180px;height:180px;right:-40px;top:0}.blobs i:nth-child(2),.blobs i:nth-child(3){display:none}}
+@media(prefers-reduced-motion:reduce){.blobs i,.cta::before,.cta::after{animation:none}.hl{animation:none;background-size:100% .08em}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<script>document.documentElement.className="js"</script>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<div class="w">
+
+<nav>
+  <b>Aditya</b>
+  <div><a href="#work">Work</a><a href="#about">About</a><a href="#hire">Hire</a></div>
+</nav>
+
+<header class="hero">
+  <div class="blobs" aria-hidden="true"><i></i><i></i></div>
+  <div class="pill up"><span class="dot"></span>Available for new projects</div>
+  <h1 class="up" style="--d:.1s">Build your <span class="hl">website</span> with me.</h1>
+  <p class="up" style="--d:.25s">I'm Aditya, a website designer. I make simple, clear websites that are easy to use and easy to remember.</p>
+  <div class="btns up" style="--d:.4s">
+    <a class="btn dark" href="https://www.instagram.com/betterdesigns_/" target="_blank" rel="noopener">Message on Instagram</a>
+    <a class="btn" href="mailto:iamspyrit@gmail.com">iamspyrit@gmail.com</a>
+  </div>
+  <div class="hv" aria-hidden="true">
+    <div class="win"><div class="top"><i></i><i></i><i></i></div>
+      <div class="pg"><div class="circ"></div><div class="ln" style="width:80%"></div><div class="ln" style="width:55%"></div><span class="mini"></span>
+        <svg class="cur" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#fff" stroke="#161616" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </div></div>
+    <div class="chip"><b>&#10003;</b>Launch ready</div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div>
+  <span>Portfolio websites</span><span>Landing pages</span><span>Business websites</span><span>Clean design</span>
+  <span>Portfolio websites</span><span>Landing pages</span><span>Business websites</span><span>Clean design</span>
+</div></div>
+
+<section class="sec" id="work">
+  <h2 class="rv">Selected work</h2>
+  <div class="grid">
+    <a class="card rv" href="https://irongymweb.vercel.app" target="_blank" rel="noopener">
+      <div class="img"><span class="tag">Visit site</span><div class="bar">
+        <i style="width:30%;height:10px"></i>
+        <i style="width:70%;height:34px;margin-top:28px"></i>
+        <i style="width:45%;height:12px"></i>
+        <i style="width:25%;height:30px;margin-top:16px;background:var(--accent)"></i>
+        <div class="row" style="margin-top:22px"><i></i><i></i><i></i></div>
+      </div></div>
+      <h3>Gym Website</h3><span>Portfolio website</span>
+    </a>
+    <a class="card rv" style="--d:.12s" href="https://spyrit-india.vercel.app" target="_blank" rel="noopener">
+      <div class="img"><span class="tag">Visit site</span><div class="bar">
+        <i style="width:30%;height:10px"></i>
+        <b style="margin-top:22px"></b>
+        <i style="width:60%;height:24px"></i>
+        <i style="width:35%;height:12px"></i>
+        <i style="width:25%;height:30px;margin-top:16px;background:var(--accent)"></i>
+      </div></div>
+      <h3>Business Website</h3><span>Landing page</span>
+    </a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="rv">Design that stays<br>out of the way.</h2>
+  <p class="rv" style="--d:.12s">A good website doesn't shout. It loads fast, reads well and makes the next step obvious. I design every page with that in mind, from the first sketch to launch.</p>
+</section>
+
+<section class="services rv">
+  <div><h4>Portfolio sites</h4><p>A clean home for your work.</p></div>
+  <div><h4>Business sites</h4><p>Clear pages that build trust.</p></div>
+  <div><h4>Landing pages</h4><p>One page, one goal.</p></div>
+</section>
+
+<section class="proc">
+  <div class="rv"><em>01</em><h4>Talk</h4><p>You tell me what you need and who it's for.</p></div>
+  <div class="rv" style="--d:.1s"><em>02</em><h4>Design</h4><p>I sketch it, simplify it, then build it.</p></div>
+  <div class="rv" style="--d:.2s"><em>03</em><h4>Launch</h4><p>Your site goes live, fast and ready to use.</p></div>
+</section>
+
+<section class="cta rv" id="hire">
+  <h2>Have an idea? Let's build it.</h2>
+  <p>Send me a message and tell me what you need.</p>
+  <div class="ct">
+    <a class="btn dark" href="https://www.instagram.com/betterdesigns_/" target="_blank" rel="noopener">Instagram @betterdesigns_</a>
+    <a class="btn" href="mailto:iamspyrit@gmail.com">iamspyrit@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <span>Aditya, website designer</span>
+  <a href="https://www.instagram.com/betterdesigns_/" target="_blank" rel="noopener">@betterdesigns_</a>
+</footer>
+
+</div>
+<script>
+(function(){var p=document.getElementById("prog");function u(){var m=document.documentElement.scrollHeight-innerHeight;p.style.transform="scaleX("+(m>0?scrollY/m:0)+")"}addEventListener("scroll",u,{passive:true});u()})();
+(function(){var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
